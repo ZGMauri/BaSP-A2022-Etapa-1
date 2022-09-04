@@ -1,0 +1,57 @@
+html {
+    height: auto;
+    min-height: 100%;
+  }
+
+* {
+    color: #373867;
+}
+
+header {
+    background-color: #373867;
+    height: 116px;
+}
+
+#redesHeader {
+    display: inline-block;
+    width: 20%;
+    height: 51px;
+    width: 225px;
+    float: right;
+    margin-top: 32px;
+}
+
+.imgRedes {
+    display: inline-block;
+    width: 20%;
+    height: auto;
+}
+
+aside {
+    background-color: #DFE4DE;
+    width: 253px;
+    height: 509px;
+    margin-left: 11px;
+    
+}
+
+.asideElements {
+    margin-left: 29px;
+    margin-top: 49px;
+}
+
+main {
+    margin-left: 264px;
+    margin-top: -509px;
+}
+
+#sectionOne {
+    height: 509px;
+}
+
+article {
+    display: block;
+    display: inline-block;
+    width: 40%;
+    height: 500px;
+}
