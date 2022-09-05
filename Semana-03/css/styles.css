@@ -126,15 +126,10 @@ main {
 
 /* SECTION TWO */
 
-#sectionTwo  {
-    border-bottom: 1px solid #373867;
-    height: 450px;
-}
-
-h2 {
+#sectionTwo h2 {
     font-size: 30px;
     font-weight: bold;
-    float: left;
+    
 }
 
 #sectionTwo h5 {
@@ -142,23 +137,38 @@ h2 {
     font-weight: bold;
 }
 
-.hours {
+.left {
+    width: 50%;
     float: left;
 }
 
-.resources {
+.right {
     display: inline-block;
+    width: 50%;
+}
+
+.hours {
+    display: block;
+    width: 40%;
+}
+
+.resources {
+    display: block;
     width: 40%;
 }
 
 .reports {
-    display: inline-block;
+    display: block;
     width: 40%;
 }
 
 .multiplesRoles {
-    display: inline-block;
+    display: block;
     width: 40%;
+}
+
+#sectionTwo  {
+    border-bottom: 1px solid #373867;
 }
 
 /* SECTION THREE SCROLL MENU */
@@ -187,6 +197,93 @@ div.scrollmenu div:hover {
     background-color: #777;
 }
 
+#sectionThree  {
+    border-bottom: 1px solid #373867;
+}
+
+/* SECTION FOURTH */
+
+#sectionFourth h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.NaEmConArea {
+    display: inline-block;
+    width: 40%;
+}
+
+.message {
+    display: inline-block;
+    width: 50%;
+}
+
+#sectionFourth  {
+    border-bottom: 1px solid #373867;
+}
+
+/* SECTION FIVE */
+
+#sectionFive {
+    width: 100%;
+}
+
+
+#sectionFive h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#sectionFive img {
+    float: right;
+    width: 40%;
+    height: 150px;
+}
+
+.ourStoryOne {
+    display: inline-block;
+    width: 40%;
+}
+
+.ourStoryTwo {
+    margin-top: 20px;
+    width: 40%;
+}
+
+#sectionFive  {
+    border-bottom: 1px solid #373867;
+}
+
+/* SECTION SIX */
+
+#sectionSix {
+    width: 100%;
+}
+
+.list_one {
+    display: inline-block;
+    width: 30%;
+}
+
+.list_two {
+    display: inline-block;
+    width: 30%;
+}
+
+.list_three {
+    display: inline-block;
+    width: 30%;
+}
+
+#sectionSix>h5 {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+#sectionSix  {
+    border-bottom: 3px solid #373867;
+}
 
 
 
