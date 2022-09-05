@@ -7,9 +7,13 @@ html {
     color: #373867;
 }
 
+
+/* HEADER */
+
 header {
     background-color: #373867;
     height: 116px;
+    border-radius: 0px 0px 10px 10px;
 }
 
 #redesHeader {
@@ -27,31 +31,44 @@ header {
     height: auto;
 }
 
-aside {
+
+/* SIDEBAR */
+
+.sidebar {
+    top: 90px;
+    min-width: 220px;
+    max-width: 275px;
+    height: auto;
+    width: 20%;
     background-color: #DFE4DE;
-    width: 253px;
-    height: 509px;
-    margin-left: 11px;
-    
+    border-radius: 0px 0px 10px 10px;    
+    margin-left: 20px;
 }
 
-.asideElements {
+.sidebar>* {
     margin-left: 29px;
-    margin-top: 49px;
+    padding: 1px;
 }
 
-main {
-    margin-left: 264px;
-    margin-top: -509px;
+.sidebar ul>li {
+    font-size: 15px;
+    text-decoration: underline;
+    margin: 0px 18px 18px 7px;
 }
 
-#sectionOne {
-    height: 509px;
+.sidebar h3 {
+    margin: 25px 18px 18px 7px;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
-article {
-    display: block;
-    display: inline-block;
-    width: 40%;
-    height: 500px;
+.sidebar p {
+    margin: 0px 18px 18px 7px;
+    font-size: 12px;
 }
+
+address {
+    margin: 0px 18px 18px 7px;
+    font-size: 12px;
+}
+
