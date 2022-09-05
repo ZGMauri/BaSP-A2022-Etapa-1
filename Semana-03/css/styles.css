@@ -7,7 +7,6 @@ html {
     color: #373867;
 }
 
-
 /* HEADER */
 
 header {
@@ -39,10 +38,11 @@ header {
     min-width: 220px;
     max-width: 275px;
     height: auto;
-    width: 20%;
+    width: 10%;
     background-color: #DFE4DE;
     border-radius: 0px 0px 10px 10px;    
     margin-left: 20px;
+    float: left;
 }
 
 .sidebar>* {
@@ -53,22 +53,140 @@ header {
 .sidebar ul>li {
     font-size: 15px;
     text-decoration: underline;
-    margin: 0px 18px 18px 7px;
+    margin: 0px 20px 18px 0px;
 }
 
 .sidebar h3 {
-    margin: 25px 18px 18px 7px;
+    margin: 0px 20px 18px 0px;
     font-weight: bold;
     text-decoration: underline;
 }
 
 .sidebar p {
-    margin: 0px 18px 18px 7px;
+    margin: 0px 20px 18px 0px;    
     font-size: 12px;
 }
 
 address {
-    margin: 0px 18px 18px 7px;
+    margin: 0px 20px 18px 0px;    
     font-size: 12px;
 }
+
+/* MAIN */
+
+/* SECTION ONE */
+
+main {
+    margin-left: 326px;
+    margin-top: 0px;
+}
+
+#sectionOne {
+    height: 450px;
+}
+
+#sectionOne div {
+    float: left;
+    width: 50%;
+    height: 500px;
+}
+
+#sectionOne h1 {
+    font-size: 40px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#sectionOne h3{
+    width: 100%;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+#sectionOne p {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 60px;
+}
+
+#sectionOne span {
+    font-weight: bold;
+}
+
+#sectionOne>img {
+    float: right;
+    width: 450px;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+
+#sectionOne  {
+    border-bottom: 1px solid #373867;
+}
+
+/* SECTION TWO */
+
+#sectionTwo  {
+    border-bottom: 1px solid #373867;
+    height: 450px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    float: left;
+}
+
+#sectionTwo h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hours {
+    float: left;
+}
+
+.resources {
+    display: inline-block;
+    width: 40%;
+}
+
+.reports {
+    display: inline-block;
+    width: 40%;
+}
+
+.multiplesRoles {
+    display: inline-block;
+    width: 40%;
+}
+
+/* SECTION THREE SCROLL MENU */
+
+#sectionThree h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#sectionThree h5 {
+    font-weight: bold;
+}
+
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+}
+  
+div.scrollmenu div {
+    display: inline-block;
+    padding: 14px;
+    text-decoration: none;
+}
+  
+div.scrollmenu div:hover {
+    background-color: #777;
+}
+
+
+
 
