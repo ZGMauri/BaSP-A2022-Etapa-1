@@ -137,9 +137,13 @@ main {
     font-weight: bold;
 }
 
+#sectionTwo {
+    
+}
+
 .left {
-    width: 50%;
     float: left;
+    width: 50%;
 }
 
 .right {
@@ -210,12 +214,25 @@ div.scrollmenu div:hover {
 
 .NaEmConArea {
     display: inline-block;
-    width: 40%;
+    width: 70%;
+}
+
+.labelDatos {
+    display: block; 
+}
+
+input {
+    width: 45%;
+}
+
+.contact input{
+    display: inline;
+    width: 2%;
 }
 
 .message {
     display: inline-block;
-    width: 50%;
+    width: 10%;  
 }
 
 #sectionFourth  {
@@ -237,18 +254,26 @@ div.scrollmenu div:hover {
 #sectionFive img {
     float: right;
     width: 40%;
-    height: 150px;
+    height: 100%;
 }
 
 .ourStoryOne {
-    display: inline-block;
-    width: 40%;
+    display: block;
+    width: 30%;
 }
 
 .ourStoryTwo {
+    display: inline-block;
     margin-top: 20px;
-    width: 40%;
+    width: 50%;
 }
+
+.ourStoryImg {
+    display: inline-block;
+    width: 30%;
+    
+}
+
 
 #sectionFive  {
     border-bottom: 1px solid #373867;
@@ -262,12 +287,12 @@ div.scrollmenu div:hover {
 
 .list_one {
     display: inline-block;
-    width: 30%;
+    width: 34%;
 }
 
 .list_two {
     display: inline-block;
-    width: 30%;
+    width: 34%;
 }
 
 .list_three {
@@ -283,6 +308,22 @@ div.scrollmenu div:hover {
 
 #sectionSix  {
     border-bottom: 3px solid #373867;
+}
+
+/* FOOTER */
+
+footer {
+    width: 50%;
+    margin-left: 30%;
+    margin-right: 50%;
+}
+
+footer p{
+    text-align: center;
+}
+
+footer div {
+    text-align: center;
 }
 
 
