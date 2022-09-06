@@ -120,6 +120,11 @@ main {
     margin-right: 25px;
 }
 
+#sectionOne a {
+    position: relative;
+    top: 400px;
+}
+
 #sectionOne  {
     border-bottom: 1px solid #373867;
 }
