@@ -88,7 +88,7 @@ main {
 #sectionOne div {
     float: left;
     width: 50%;
-    height: 500px;
+    height: 450px;
 }
 
 #sectionOne h1 {
@@ -126,54 +126,48 @@ main {
 
 /* SECTION TWO */
 
-#sectionTwo h2 {
+.top {
+    width: 100%;
+  }
+  
+  .bottom {
+    width: 100%;
+  }
+  
+  #sectionTwo h2 {
     font-size: 30px;
     font-weight: bold;
-    
-}
-
-#sectionTwo h5 {
+  }
+  
+  #sectionTwo h5 {
     font-size: 18px;
     font-weight: bold;
-}
+  }
 
-#sectionTwo {
-    
-}
-
-.left {
-    float: left;
-    width: 50%;
-}
-
-.right {
+  
+  .hours {
     display: inline-block;
-    width: 50%;
-}
-
-.hours {
-    display: block;
-    width: 40%;
-}
-
-.resources {
-    display: block;
-    width: 40%;
-}
-
-.reports {
-    display: block;
-    width: 40%;
-}
-
-.multiplesRoles {
-    display: block;
-    width: 40%;
-}
-
-#sectionTwo  {
+    width: 45%;
+  }
+  
+  .resources {
+    display: inline-block;
+    width: 45%;
+  }
+  
+  .reports {
+    display: inline-block;
+    width: 45%;
+  }
+  
+  .multiplesRoles {
+    display: inline-block;
+    width: 45%;
+  }
+  
+  #sectionTwo {
     border-bottom: 1px solid #373867;
-}
+  }
 
 /* SECTION THREE SCROLL MENU */
 
@@ -200,6 +194,7 @@ div.scrollmenu div {
 div.scrollmenu div:hover {
     background-color: #777;
 }
+
 
 #sectionThree  {
     border-bottom: 1px solid #373867;
