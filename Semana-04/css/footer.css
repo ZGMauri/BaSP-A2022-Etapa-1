@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
+        width: 50%;
+        margin-left: 35%;
+    }
+
+    footer p{
+        text-align: center;
+    }
+
+    footer div {
+        text-align: center;
+    }
+
+}
