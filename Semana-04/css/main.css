@@ -80,37 +80,38 @@ main {
 
 @media screen and (min-width: 1024px) {
     #first_container {
-        height: 400px;
-        float: left;
+        height: 550px;
         width: 100%;
+    }
+
+    #first_container > div > section {
+        justify-content: center;
+        align-items: stretch;
     }
 
 }
 
-
-/* SECTION TWO */
-
 .top {
     width: 100%;
-  }
+}
   
-  .bottom {
+.bottom {
     width: 100%;
-  }
+}
   
-  #services_container h2 {
+#services_container h2 {
     font-size: 30px;
     font-weight: bold;
-  }
+}
   
-  #services_container h5 {
+#services_container h5 {
     font-size: 18px;
     font-weight: bold;
-  }
+}
   
 #hours_movil > h5 {
     border-bottom: 1px solid #373867;
- }
+}
 
 .hours {
     display: flex;
@@ -119,7 +120,7 @@ main {
 
 #reports_movil > h5 {
     border-bottom: 1px solid #373867;
- }
+}
 
 .reports {
     display: flex;
@@ -137,7 +138,7 @@ main {
 
 #multiRoles_movil > h5 {
     border-bottom: 1px solid #373867;
- }
+}
 
 .multiplesRoles {
     display: flex;
@@ -194,9 +195,6 @@ main {
         width: 45%;
     }
 }
-
-
-/* SECTION THREE SCROLL MENU */
 
 #scroll_container {
     display: flex;
@@ -288,7 +286,6 @@ main {
     
 }
 
-/* SECTION FOURTH */
 
 #requestInfo_container h3 {
     font-size: 25px;
@@ -363,8 +360,6 @@ main {
         width: 12%;
     }
 }
-
-/* SECTION FIVE */
 
 #imgStory {
     display: none;
@@ -452,8 +447,6 @@ main {
         
     }
 }
-
-/* SECTION SIX */
 
 #list_container {
     display: flex;
