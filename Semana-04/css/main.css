@@ -283,6 +283,10 @@ main {
         display: block;
         border-bottom: 1px solid #373867;
     }
+
+    .scrollmenu_section  p {
+        width: 50%;
+    }
     
 }
 
