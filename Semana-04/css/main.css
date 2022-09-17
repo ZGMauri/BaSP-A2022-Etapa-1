@@ -264,7 +264,6 @@ main {
     }
 
     .scrollmenu {
-        display: block;
         overflow: auto;
         white-space: nowrap;
     }
@@ -280,7 +279,6 @@ main {
     }
 
     #scroll_container  {
-        display: block;
         border-bottom: 1px solid #373867;
     }
 
