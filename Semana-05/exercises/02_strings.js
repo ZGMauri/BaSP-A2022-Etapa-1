@@ -36,8 +36,6 @@ console.log(textoEnBlanco);
 //(utilizar indexOf, substring, toUpperCase, toLowerCase y el operador +).
 console.log('--EXERCISE 2.f--');
 var textoSeis = 'palabralarga palabramaslarga';
-var encontrarSegundaMayuscula = textoSeis.indexOf(' ');
-console.log(encontrarSegundaMayuscula);
 var palabraResultado = textoSeis.toUpperCase().substring(0,1) +
     textoSeis.substring( 1, textoSeis.indexOf(' ') + 1) + 
     textoSeis.toLocaleUpperCase().substring(textoSeis.indexOf(' ') + 1,textoSeis.indexOf(' ') + 2) +
