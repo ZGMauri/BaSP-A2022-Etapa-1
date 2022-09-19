@@ -17,7 +17,7 @@ console.log('--EXERCISE 6.b--');
 function sumaValidar(a,b){
     if (typeof(a) != 'number' || typeof(b) != 'number'){
         alert ('Uno de los parametros no es un numero');
-        console.log(NaN);
+        return NaN;
     }
     return a + b;
 }
@@ -25,45 +25,62 @@ sumaValidar('string',4);
 
 //Aparte, crear una función validate Integer que reciba un número como parámetro y devuelva verdadero si es un número entero.
 console.log('--EXERCISE 6.c--');
-function validate (a){
-    if (Number.isInteger (a)){
+function validateInteger (a){
+    if (a % 1 == 0) {
         return true;
+    } else {
+        return false;
     }
-    return false;
 }
-console.log(validate(4));
+console.log(validateInteger(4));
 
 /*A la función suma del ejercicio 6b) agregarle una llamada a la función del ejercicio 6c.
 Y que valide que los números sean enteros. En caso que haya decimales mostrar un alerta
 con el error y retornar el número convertido a entero (redondeado).*/
 console.log('--EXERCISE 6.d--');
-function sumaValidarEnteros (a,b){
-    if (!validate(a)){
-        alert('El primer numero no es entero');
-        return Math.round(a);
-    }else if (!validate(b)){
-        alert('El segundo numero no es entero');
-        return Math.round(b);
-    }else {
-        return a + b;
+function sumaValidarD(a,b){
+    if (typeof(a) != 'number' || typeof(b) != 'number'){
+        alert ('Uno de los parametros no es un numero');
+        return NaN;
+    } else {
+        if (!validateInteger(a)){
+            alert('El primer numero no es entero');
+            return Math.round(a);
+        }else if (!validateInteger(b)){
+            alert('El segundo numero no es entero');
+            return Math.round(b);
+        }else {
+            return a + b;
+        }
     }
 }
-console.log(sumaValidarEnteros(4,5));
+console.log(sumaValidarD(4.3,5));
 
 //Convertir la validación del ejercicio 6d) en una función separada y llamarla dentro de la función suma probando que todo siga funcionando igual.
 console.log('--EXERCISE 6.e--');
-function validateDos (a,b){
-    if (Number.isInteger(a) && Number.isInteger(b)){
-        return a + b
-    }else if (!Number.isInteger(a)){
-        alert('El primer numero no es entero');
-        return Math.round(a);
+function validate (a,b){
+    if (!validateInteger(a)){
+        alert('El primer numero no es entero, el enero seria ' + Math.round(a));
+        return false;
+    }else if(!validateInteger(b)){
+        alert('El segundo numero no es entero, el entero seria ' + Math.round(b));
+        return false;
     }
-    alert('el segundo numero no es entero');
-    return Math.round(b);
+    return true;
 }
 
-function sumaE(a,b) {
-    return validateDos(a,b);
+function sumaValidarE(a,b){
+    if (typeof(a) != 'number' || typeof(b) != 'number'){
+        alert ('Uno de los parametros no es un numero');
+        return NaN;
+    }else {
+        if (!validate(a,b)){
+            return console.log('Uno de los numeros no es entero');
+        }
+        else{
+            return a + b;
+        }
+    }
 }
-console.log(sumaE(4.3,5));
+
+console.log(sumaValidarE(4,5));
