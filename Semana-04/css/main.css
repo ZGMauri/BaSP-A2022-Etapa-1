@@ -4,15 +4,15 @@ main {
     margin-top: 0px;
 }
 
-#first_container {
+.first-container {
     height: auto;
 }
 
-#first_container h1 {
+.first-container h1 {
     font-size: 30px;
 }
 
-#first_container div {
+.first-container div {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -21,50 +21,50 @@ main {
   align-content: stretch;
 }
 
-#first_container h3{
+.first_container h3{
     width: 100%;
     font-size: 25px;
     margin-top: 20px;
 }
 
-#first_container p {
+.first_container p {
     width: 100%;
     font-size: 15px;
 }
 
-#first_container span {
+.first_container span {
     font-weight: bold;
 }
 
-#first_container > a {
+.first_container > a {
     display: flex;
     flex-direction: wrap;
     justify-content: center;
     margin-top: 20px;
 }
 
-#first_container  {
+.first_container  {
     border-bottom: 1px solid #373867;
 }
 
 
 @media screen and (min-width: 480px) {
-    #first_container div {
+    .first_container div {
         display: flex;
         flex-direction: row;      
     }
 
-    #first_container > div > section {
+    .first_container > div > section {
         display: flex;
         flex-direction: column;      
     }
 
-    #first_container > div > img {
+    .first_container > div > img {
         width: 50%;
         object-fit: cover;
     }
 
-    #first_container > a {
+    .first_container > a {
         display: flex;
         flex-direction: wrap;
         justify-content: flex-start;
@@ -79,12 +79,12 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-    #first_container {
+    .first_container {
         height: 550px;
         width: 100%;
     }
 
-    #first_container > div > section {
+    .first_container > div > section {
         justify-content: center;
         align-items: stretch;
     }
@@ -99,17 +99,17 @@ main {
     width: 100%;
 }
   
-#services_container h2 {
+.services_container h2 {
     font-size: 30px;
     font-weight: bold;
 }
   
-#services_container h5 {
+.services_container h5 {
     font-size: 18px;
     font-weight: bold;
 }
   
-#hours_movil > h5 {
+.hours_movil > h5 {
     border-bottom: 1px solid #373867;
 }
 
@@ -118,7 +118,7 @@ main {
     flex-direction: row-reverse;
 }
 
-#reports_movil > h5 {
+.reports_movil > h5 {
     border-bottom: 1px solid #373867;
 }
 
@@ -127,7 +127,7 @@ main {
     flex-direction: row;
 }
 
-#resources_movil > h5 {
+.resources_movil > h5 {
     border-bottom: 1px solid #373867;
  }
 
@@ -136,7 +136,7 @@ main {
     flex-direction: row-reverse;
 }
 
-#multiRoles_movil > h5 {
+.multiRoles_movil > h5 {
     border-bottom: 1px solid #373867;
 }
 
@@ -145,7 +145,7 @@ main {
     flex-direction: row;
 }
 
-#services_container {
+.services_container {
     border-bottom: 1px solid #373867;
 }
 
@@ -196,17 +196,17 @@ main {
     }
 }
 
-#scroll_container {
+.scroll_container {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #373867;
 }
 
-#scroll_container img {
+.scroll_container img {
     display: none;
 }
 
-#scroll_container div {
+.scroll_container div {
     border-bottom: 1px solid #373867;
 }
 
@@ -254,12 +254,12 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-    #scroll_container h3 {
+    .scroll_container h3 {
         font-size: 25px;
         font-weight: bold;
     }
 
-    #scroll_container h5 {
+    .scroll_container h5 {
         font-weight: bold;
     }
 
@@ -278,7 +278,7 @@ main {
         background-color: #777;
     }
 
-    #scroll_container  {
+    .scroll_container  {
         border-bottom: 1px solid #373867;
     }
 
@@ -289,7 +289,7 @@ main {
 }
 
 
-#requestInfo_container h3 {
+.requestInfo_container h3 {
     font-size: 25px;
     font-weight: bold;
     display: flex;
@@ -313,7 +313,7 @@ main {
     width: 10%;
 }
 
-#requestInfo_container {
+.requestInfo_container {
     border-bottom: 1px solid #373867;
 
 }
@@ -347,13 +347,13 @@ main {
         width: 2%;
     }
 
-    #requestInfo_container form {
+    .requestInfo_container form {
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
-    #requestInfo_container  {
+    .requestInfo_container  {
         border-bottom: 1px solid #373867;
     }
 
@@ -363,16 +363,16 @@ main {
     }
 }
 
-#imgStory {
+.imgStory {
     display: none;
 }
 
-#history_container h3 {
+.history_container h3 {
     font-size: 25px;
     font-weight: bold;
 }
 
-#history_container  {
+.history_container  {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #373867;
@@ -387,11 +387,11 @@ main {
 }
 
 @media screen and (min-width: 480px) {
-    #imgStory {
+    .imgStory {
         display: block;
     }
 
-    #history_container {
+    .history_container {
         display: flex;
         flex-direction: column;
     }
@@ -410,20 +410,20 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-    #history_container {
+    .history_container {
         width: 100%;
     }
     
-    #imgStory {
+    .imgStory {
         display: none;
     }
     
-    #history_container h3 {
+    .history_container h3 {
         font-size: 25px;
         font-weight: bold;
     }
     
-    #history_container > div > img {
+    .history_container > div > img {
         float: right;
         width: 40%;
         height: 100%;
@@ -450,13 +450,13 @@ main {
     }
 }
 
-#list_container {
+.list_container {
     display: flex;
     flex-direction: column;
     border-bottom: 3px solid #373867;
 }
 
-#list_container > div > h5 {
+.list_container > div > h5 {
     font-weight: bold;
     font-size: 18px;
     text-decoration: underline;
@@ -466,12 +466,12 @@ main {
     margin-left: 30px;
 } 
 
-#list_container > div > ul {
+.list_container > div > ul {
     margin-left: 15px;
 }
 
 @media screen and (min-width: 480px) {
-    #list_container {
+    .list_container {
         display: flex;
         flex-direction: row;
         justify-content: space-around;

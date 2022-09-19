@@ -1,59 +1,59 @@
-.header_container {
+.header-container {
     background-color: #373867;
     width: 100%;
     height: 116px;
     border-radius: 0px 0px 10px 10px;
 }
 
-#logoTablet {
+.logo-tablet {
     display: none;
 }
 
-#redesHeader {
+.redes-header {
     width: 20%;
     float: right;
     display: none;
 }
 
-.imgRedes {
+.img-redes {
     height: 20px;
     width: 20px;
 }
 
 @media screen and (min-width: 480px) {
-    #logoMobile {
+    .logo-mobile {
         display: none;
     }
 
-    #logoTablet {
+    .logo-tablet {
         display: block;
         margin-left: 20px;
         padding-top: 20px;
     }
 
-    #redesHeader {
+    .redes-header {
         float: right;
         display: block;
         width: 30%;
         margin-top: -55px;
     }
 
-    #redesHeader > img {
+    .redes-header > img {
         height: 50px;
         width: 50px;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    #redesHeader {
+    .redes-header {
         width: 20%;
     }
 
-    #logoMobile {
+    .logo-mobile {
         display: block;
     }
 
-    #logoTablet {
+    .logo-tablet {
         display: none;
     }
 }
