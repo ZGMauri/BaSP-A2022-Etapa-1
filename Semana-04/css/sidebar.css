@@ -1,4 +1,3 @@
-
 .sidebar {
     display: none;
 }
@@ -6,6 +5,20 @@
 
 
 @media screen and (min-width: 1024px) {
+    .main-aside-section {
+        display: flex; 
+        align-content: flex-start;
+    }
+
+    .main-aside-section > aside {
+        width: 20%;
+        height: 390px;
+    }
+
+    .main-aside-section > main {
+        width: 80%;
+    }
+
     .sidebar {
         display: block;
         min-width: 220px;
@@ -15,7 +28,6 @@
         background-color: #DFE4DE;
         border-radius: 0px 0px 10px 10px;    
         margin-left: 20px;
-        float: left;
         margin-left: 29px;
         padding: 10px;
     }
@@ -40,10 +52,5 @@
     address {
         margin: 0px 20px 18px 0px;    
         font-size: 12px;
-    }
-
-    main {
-        margin-left: 326px;
-        margin-top: 0px;
     }
 }
