@@ -15,7 +15,6 @@
 
 .redes-header {
     width: 20%;
-    float: right;
     display: none;
 }
 
@@ -36,15 +35,20 @@
     }
 
     .redes-header {
-        float: right;
         display: block;
         width: 30%;
-        margin-top: -55px;
     }
 
     .redes-header > img {
         height: 50px;
         width: 50px;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 

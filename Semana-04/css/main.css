@@ -74,8 +74,7 @@ main {
         border: 1px solid #373867;
         width: 105px;
         padding: 8px 10px;
-    }
-   
+    } 
 }
 
 @media screen and (min-width: 1024px) {
@@ -147,8 +146,31 @@ main {
 
 .services-container {
     border-bottom: 1px solid #373867;
+    padding: 15px;
 }
 
+.hours-movil-img{
+    position: relative; 
+    left: 0; 
+    top: 0;
+}
+
+.logo{
+    position:absolute;
+    height:100px;
+    width:100px;
+    top: 0px;
+    left : 0px;
+    z-index: 1;
+    opacity: 1;
+}
+
+.logo-fondo{
+    height:100px;
+    width:100px;
+    z-index: -1;
+    left: 0px;
+} 
 
 @media screen and (min-width: 480px) {
 
@@ -171,7 +193,6 @@ main {
         display: flex;
         flex-direction: row-reverse;
     }
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -200,6 +221,7 @@ main {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #373867;
+    padding: 15px;
 }
 
 .scroll-container img {
@@ -288,7 +310,6 @@ main {
     
 }
 
-
 .request-info-container h3 {
     font-size: 25px;
     font-weight: bold;
@@ -315,7 +336,7 @@ main {
 
 .request-info-container {
     border-bottom: 1px solid #373867;
-
+    padding: 15px;
 }
 
 @media screen and (min-width: 480px) {
@@ -376,6 +397,7 @@ main {
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #373867;
+    padding: 15px;
 }
 
 .our-story-one {
@@ -446,7 +468,6 @@ main {
         width: 95%;
         margin-top: -70px;
         margin-bottom: -70px;
-        
     }
 }
 
@@ -454,6 +475,7 @@ main {
     display: flex;
     flex-direction: column;
     border-bottom: 3px solid #373867;
+    padding: 15px;
 }
 
 .list-container > div > h5 {
