@@ -16,9 +16,14 @@ On this week we gave styles using CSS
 
 This week we create a responsive design for tablet and phones
 
+## Week 05
+
+On this week we did some exercises with JavaScript and we adjust some details in css file of last week
+
 ## GitHub Pages
 
 https://zgmauri.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
+https://zgmauri.github.io/BaSP-A2022-Etapa-1/Semana-05/index.html
 
 ## Authors
 
