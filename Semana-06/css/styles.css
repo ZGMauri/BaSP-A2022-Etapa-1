@@ -1,0 +1,15 @@
+html {
+    height: auto;
+    min-height: 100%;
+ }
+
+* {
+    color: #373867;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+
+
