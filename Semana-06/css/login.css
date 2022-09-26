@@ -94,3 +94,18 @@
     transition: background-color 0.5 ease;
     z-index: -1;
 }
+
+.employee {
+    display: flex;
+    flex-direction: column;
+}
+
+.employee-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.form-content .error {
+    border-bottom: 2px solid red;
+}
