@@ -119,7 +119,7 @@ window.onload = function (){
             if (adress.value.length < 5){
                 console.log('debe tener al menos 5 caracteres');
                 adress.classList.add('error');
-            }else if (adress.value.indexOf(' ') == -1){
+            }else if (adress.value.indexOf(' ') == -1 || adress.value.indexOf(' ') == 0 || adress.value.indexOf(' ') == (adress.value.length) -1 ){
                 console.log('formato no valido');
                 adress.classList.add('error');
             }else{
