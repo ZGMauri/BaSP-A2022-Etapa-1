@@ -16,10 +16,20 @@ window.onload = function (){
     var arrayChar = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','u','v','w','x','y','z'];
     var haveLetters = false;
     var haveNumbers = false;
+    var pError1 = document.getElementById('errorMsgName');
+    var pError2 = document.getElementById('errorMsgCity');
+    var pError3 = document.getElementById('errorMsgDni');
+    //var pError4 = document.getElementById('errorMsgDate');
+    var pError5 = document.getElementById('errorMsgMail');
+    var pError6 = document.getElementById('errorMsgRPass');
+    var pError7 = document.getElementById('errorMsgLName');
+    var pError8 = document.getElementById('errorMsgPostal');
+    var pError9 = document.getElementById('errorMsgPhone');
+    var pError10 = document.getElementById('errorMsgAdress');
+    var pError11 = document.getElementById('errorMsgPass');
+    var p = document.createElement("p");
+    var pText = document.createTextNode('');
 
-    //button.addEventListener('click', findLetters);
- 
-    //var substrings = name.value.split('');
     function findLetters (x){
         haveLetters = false;
         var yourstring = x.split('')
@@ -58,6 +68,8 @@ window.onload = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
             }
+            pError1.removeChild(p);
+            pText.textContent = '';
         }
     }
 
@@ -65,11 +77,17 @@ window.onload = function (){
         name.onblur = function (){
             var y = name.value;
             if (name.value.length <= 3){
-                console.log('debe tener mas de 3 letras');
                 name.classList.add('error');
+                pText.textContent = 'Tiene que tener mas de 3 caracteres';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError1.appendChild(p);
             }else if (findNumbers(y)){
-                console.log('no puede tener numeros');
                 name.classList.add('error');
+                pText.textContent= 'No puede tener numeros';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError1.appendChild(p);
             }else{
                 console.log('correcto')
             }
@@ -84,6 +102,8 @@ window.onload = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
             }
+            pError7.removeChild(p);
+            pText.textContent = '';
         }
     }
 
@@ -91,11 +111,17 @@ window.onload = function (){
         lastName.onblur = function (){
             var y = lastName.value;
             if (lastName.value.length <= 3){
-                console.log('debe tener mas de 3 letras');
                 lastName.classList.add('error');
+                pText.textContent = 'Tiene que tener mas de 3 caracteres';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError7.appendChild(p);
             }else if (findNumbers(y)){
-                console.log('no puede tener numeros');
                 lastName.classList.add('error');
+                pText.textContent= 'No puede tener numeros';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError7.appendChild(p);
             }else{
                 console.log('correcto')
             }
@@ -110,6 +136,8 @@ window.onload = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
             }
+            pError10.removeChild(p);
+            pText.textContent = '';
         }
     }
 
@@ -117,11 +145,17 @@ window.onload = function (){
         adress.onblur = function (){
             
             if (adress.value.length < 5){
-                console.log('debe tener al menos 5 caracteres');
                 adress.classList.add('error');
+                pText.textContent = 'Debe tener al menos 5 caracteres';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError10.appendChild(p);
             }else if (adress.value.indexOf(' ') == -1 || adress.value.indexOf(' ') == 0 || adress.value.indexOf(' ') == (adress.value.length) -1 ){
-                console.log('formato no valido');
                 adress.classList.add('error');
+                pText.textContent = 'Formato no valido';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError10.appendChild(p);
             }else{
                 console.log('oki doki')
             }
@@ -136,6 +170,8 @@ window.onload = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
             }
+            pError2.removeChild(p);
+            pText.textContent = '';
         }
     }
 
@@ -143,11 +179,17 @@ window.onload = function (){
         city.onblur = function (){ 
             var y = city.value;          
             if (city.value.length <= 3){
-                console.log('debe tener mas de 3 letras');
                 city.classList.add('error');
+                pText.textContent = 'Tiene que tener mas de 3 caracteres';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError2.appendChild(p);
             }else if(!findNumbers(y) || !findLetters(y)){
-                console.log('formato invalido');
                 city.classList.add('error');
+                pText.textContent = 'Formato invalido';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError2.appendChild(p);
             }else{
                 console.log('correcto')
             }
@@ -167,6 +209,8 @@ window.onload = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
             }
+            pError5.removeChild(p);
+            pText.textContent = '';
         }
     }
 
@@ -174,6 +218,10 @@ window.onload = function (){
         mail.onblur = function (){
             if (!parametro(mail.value)){
                 mail.classList.add('error')
+                pText.textContent = 'Formato de mail invalido';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError5.appendChild(p);
             }
         }
     }
@@ -186,19 +234,27 @@ window.onload = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
             }
+            pError3.removeChild(p);
+            pText.textContent = '';
         }
     }
 
     function aproveDni (e){
         dni.onblur = function (){
             if(isNaN(dni.value)){
-                alert('El DNI debe contener solo numeros')
                 dni.classList.add('error')
+                pText.textContent = 'El DNI debe contener solo numeros';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError3.appendChild(p);
             }else if (dni.value.length < 7){
-                alert('El DNI debe contener mas de 7 caracteres')
                 dni.classList.add('error')
+                pText.textContent = 'El DNI debe contener mas de 7 caracteres';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError3.appendChild(p);
             }else {
-                alert('Correcto')
+                console.log('Correcto')
             }
         }
     }
@@ -211,19 +267,27 @@ window.onload = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
             }
+            pError9.removeChild(p);
+            pText.textContent = '';
         }
     }
 
     function aprovePhone (e){
         phone.onblur = function (){
             if(isNaN(phone.value)){
-                alert('El telefono debe contener solo numeros')
                 phone.classList.add('error')
+                pText.textContent = 'El telefono debe contener solo numeros';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError9.appendChild(p);
             }else if (phone.value.length != 10){
-                alert('El telefono debe contener 10 caracteres')
                 phone.classList.add('error')
+                pText.textContent = 'Debe contener al menos 10 caracteres';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError9.appendChild(p);
             }else {
-                alert('Correcto')
+                console.log('Correcto')
             }
         }
     }
@@ -236,66 +300,114 @@ window.onload = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
             }
+            pError8.removeChild(p);
+            pText.textContent = '';
         }
     }
 
     function aprovePostalCode (e){
         postalCode.onblur = function (){
             if(isNaN(postalCode.value)){
-                alert('El codigo postal debe contener solo numeros')
                 postalCode.classList.add('error')
+                pText.textContent = 'El codigo postal debe contener solo numeros';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError8.appendChild(p);
             }else if ((postalCode.value.length < 4) || (postalCode.value.length > 5)){
-                alert('El codigo postal debe contener entre 4 y 5 caracteres')
                 postalCode.classList.add('error')
+                pText.textContent = 'El codigo postal debe contener entre 4 y 5 caracteres';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError8.appendChild(p);
             }else {
-                alert('Correcto')
+                console.log('Correcto');
             }
         }
     }
-  
-   /*  button.addEventListener('click', validate);
+    
+    password.addEventListener ('blur', aprovePass);
+    password.addEventListener ('focus', errorPass);
 
-    function validate (e) {
+    function errorPass (e){
+        password.onfocus = function (){
+            if (this.classList.contains('error')){
+                this.classList.remove('error');
+            }
+            pError11.removeChild(p);
+            pText.textContent = '';
+        }
+    }
+
+    function aprovePass (e){
+        password.onblur = function (){
+            if(password.value.length < 8){
+                password.classList.add('error');
+                pText.textContent = 'Tiene que tener al menos 8 caracteres';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError11.appendChild(p);
+            }else {
+                console.log('Correcto')
+            }
+        }
+    }
+
+    repeatPassword.addEventListener ('blur', aproveRPass);
+    repeatPassword.addEventListener ('focus', errorRPass);
+
+    function errorRPass (e){
+        repeatPassword.onfocus = function (){
+            if (this.classList.contains('error')){
+                this.classList.remove('error');
+            }
+            pError6.removeChild(p);
+            pText.textContent = '';
+        }
+    }
+
+    function aproveRPass (e){
+        repeatPassword.onblur = function (){
+            if(repeatPassword.value != password.value){
+                password.classList.add('error');
+                pText.textContent = 'Las contraseñas no coinciden';
+                p.appendChild(pText);
+                p.style.color = '#FF0000';
+                pError6.appendChild(p);
+            }else {
+                console.log('Correcto')
+            }
+        }
+    }
+
+    button.addEventListener('click', confirm);
+
+    function confirm (e){
         e.preventDefault()
-         if(name.value.length < 3){
-            alert('El nombre debe tener al menos 3 caracteres');
-        }else if (!isNaN(name.value)){
-            alert('El nombre no puede contener numeros')
-        }
- 
-         if(isNaN(dni.value)){
-            alert('El DNI debe contener solo numeros')
-        }else if (dni.value.length < 7){
-            alert('El DNI debe contener mas de 7 caracteres')
+        if (name.classList.contains('error')){
+            alert('El nombre no es valido');
+        }else if (lastName.classList.contains('error')){
+            alert('El apellido no es valido');
+        }else if (city.classList.contains('error')){
+            alert('El campo city no es valido');
+        }else if (postalCode.classList.contains('error')){
+            alert('El codigo postal no es valido');
+        }else if (dni.classList.contains('error')){
+            alert('El DNI no es valido');
+        }else if (phone.classList.contains('error')){
+            alert('El telefono no es valido');
+        }else if (date.classList.contains('error')){
+            alert('La fecha no es valida');
+        }else if (adress.classList.contains('error')){
+            alert('La direccion no es valido');
+        }else if (mail.classList.contains('error')){
+            alert('El mail no es valido');
+        }else if (password.classList.contains('error')){
+            alert('El contraseña no es valida');
+        }else if (repeatPassword.classList.contains('error')){
+            alert('Las contraseñas no coinciden');
         }else {
-            alert('Correcto')
+            alert(name.value + '\n' + lastName.value + '\n' + city.value + '\n' + postalCode.value + '\n' + dni.value + '\n' + phone.value 
+            + '\n' + date.value + '\n' + adress.value + '\n' + mail.value + '\n' + password.value + '\n' + repeatPassword.value);
         }
-
-        if(isNaN(phone.value)){
-            alert('El telefono debe contener solo numeros')
-        }else if (phone.value.length != 10){
-            alert('El telefono debe contener 10 caracteres')
-        }else {
-            alert('Correcto')
-        }
-
-        if(isNaN(postalCode.value)){
-            alert('El codigo postal debe contener solo numeros')
-        }else if ((postalCode.value.length >= 4) && (postalCode.value.length <= 5)){
-            alert('El codigo postal debe contener 10 caracteres')
-        }else {
-            alert('Correcto')
-        }
-
-        var emailExpression = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
-        function parametro (mail) {
-            return emailExpression.test(mail);
-        }
-
-        if (parametro(mail.value)){
-            console.log('mail correcto');
-        }else {
-            console.log('mail incorrecto');
-        }
-    } */
+    }
 }

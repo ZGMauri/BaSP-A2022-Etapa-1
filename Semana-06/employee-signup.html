@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/header.css">
         <link rel="stylesheet" href="./css/sidebar.css">
-        <link rel="stylesheet" href="./css/login.css">
+        <link rel="stylesheet" href="./css/employee-signup.css">
         <script src="employee-signup.js"></script>
         <title>Trackgenix by RadiumRocket</title>
 </head>
@@ -54,33 +54,47 @@
                     <div class="box">
                         <h3>Sign In</h3>
                         <form action="" class="employee">
-                            <div class="input-box employee-div">
-                                <input type="text" placeholder="Name" class="input-control" id="name">
-                                <input type="text" placeholder="Last Name" class="input-control" id="last-name">
+                            <div class="left">
+                                <div class="input-box employee-div" id="errorMsgName">
+                                    <input type="text" placeholder="Name" class="input-control" id="name">
+                                </div>
+                                <div class="input-box employee-div" id="errorMsgCity">
+                                    <input type="text" placeholder="City" class="input-control" id="city">
+                                </div>
+                                <div class="input-box employee-div" id="errorMsgDni">
+                                    <input type="text" placeholder="DNI" class="input-control" id="dni">
+                                </div>
+                                <div class="input-box employee-div" id="errorMsgDate">
+                                    <input type="date" placeholder="Date of Birth" class="input-control" id="date">
+                                </div>
+                                <div class="input-box employee-div" id="errorMsgMail">
+                                    <input type="text" placeholder="Email" class="input-control" id="mail">
+                                </div>
+                                <div class="input-box employee-div" id="errorMsgRPass">
+                                    <input type="password" placeholder="Repeat Password" class="input-control" id="repeat-pass">
+                                </div>
                             </div>
-                            <div class="input-box employee-div">
-                                <input type="text" placeholder="DNI" class="input-control" id="dni">
-                                <input type="date" placeholder="Date of Birth" class="input-control" id="date">
-                            </div>
-                            <div class="input-box employee-div">
-                                <input type="text" placeholder="Phone" class="input-control" id="phone">
-                                <input type="text" placeholder="Adress" class="input-control" id="adress">
-                            </div>
-                            <div class="input-box employee-div">
-                                <input type="text" placeholder="City" class="input-control" id="city">
-                                <input type="text" placeholder="Postal Code" class="input-control" id="postal-code">
-                            </div>
-                            <div class="input-box employee-div">
-                                <input type="text" placeholder="Email" class="input-control" id="mail">
-                                <input type="password" placeholder="Password" class="input-control" id="pass">
-                            </div>
-                            <div class="input-box employee-div">
-                                <input type="password" placeholder="Repeat Password" class="input-control" id="repeat-pass">
-                            </div>                   
-                            <input type="checkbox" id="remember" name="remember" value="">
-                            <label for="remember"> Remember</label>
-                            <button type="submit" class="btn" id="submitBtn">Continue</button>
+                            <div class="right">
+                                <div class="input-box employee-div" id="errorMsgLName">
+                                    <input type="text" placeholder="Last Name" class="input-control" id="last-name">
+                                </div>
+                                <div class="input-box employee-div" id="errorMsgPostal">
+                                    <input type="text" placeholder="Postal Code" class="input-control" id="postal-code">
+                                </div>
+                                <div class="input-box employee-div" id="errorMsgPhone">
+                                    <input type="text" placeholder="Phone" class="input-control" id="phone">
+                                </div>
+                                <div class="input-box employee-div" id="errorMsgAdress">
+                                    <input type="text" placeholder="Adress" class="input-control" id="adress">                                  
+                                </div>
+                                <div class="input-box employee-div" id="errorMsgPass">
+                                    <input type="password" placeholder="Password" class="input-control" id="pass">
+                                </div> 
+                            </div>                  
                         </form>
+                        <input type="checkbox" id="remember" name="remember" value="">
+                        <label for="remember"> Remember</label>
+                        <button type="submit" class="btn" id="submitBtn">Continue</button>
                     </div>
                 </div>
             </section>
