@@ -109,3 +109,13 @@
 .form-content .error {
     border-bottom: 2px solid red;
 }
+
+.divMail {
+    display: flex;
+    flex-direction: row;
+}
+
+.divPass {
+    display: flex;
+    flex-direction: row;
+}
