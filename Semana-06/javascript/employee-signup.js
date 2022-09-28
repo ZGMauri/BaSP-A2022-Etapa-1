@@ -29,7 +29,7 @@ window.onload = function (){
     var pError11 = document.getElementById('errorMsgPass');
     var p = document.createElement("p");
     var pText = document.createTextNode('');
-
+ 
     function findLetters (x){
         haveLetters = false;
         var yourstring = x.split('')
@@ -152,7 +152,7 @@ window.onload = function (){
                 pError10.appendChild(p);
             }else if (adress.value.indexOf(' ') == -1 || adress.value.indexOf(' ') == 0 || adress.value.indexOf(' ') == (adress.value.length) -1 ){
                 adress.classList.add('error');
-                pText.textContent = 'Formato no valido';
+                pText.textContent = 'Debe contener letras, numeros y un espacio en el medio';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError10.appendChild(p);
@@ -186,7 +186,7 @@ window.onload = function (){
                 pError2.appendChild(p);
             }else if(!findNumbers(y) || !findLetters(y)){
                 city.classList.add('error');
-                pText.textContent = 'Formato invalido';
+                pText.textContent = 'Debe contener texto alfanumerico';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError2.appendChild(p);
@@ -379,6 +379,11 @@ window.onload = function (){
         }
     }
 
+    function convertDateFormat(date) {
+        var dateReverse = date.split('-').reverse().join('/');
+        return dateReverse;
+   }
+
     button.addEventListener('click', confirm);
 
     function confirm (e){
@@ -407,7 +412,7 @@ window.onload = function (){
             alert('Las contraseñas no coinciden');
         }else {
             alert(name.value + '\n' + lastName.value + '\n' + city.value + '\n' + postalCode.value + '\n' + dni.value + '\n' + phone.value 
-            + '\n' + date.value + '\n' + adress.value + '\n' + mail.value + '\n' + password.value + '\n' + repeatPassword.value);
+            + '\n' + convertDateFormat(date.value) + '\n' + adress.value + '\n' + mail.value + '\n' + password.value + '\n' + repeatPassword.value);
         }
     }
 }
