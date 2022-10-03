@@ -1,0 +1,527 @@
+main {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+.first-container {
+    height: auto;
+}
+
+.first-container h1 {
+    font-size: 30px;
+}
+
+.first-container div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.first-container h3{
+    width: 100%;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.first-container p {
+    width: 100%;
+    font-size: 15px;
+}
+
+.first-container span {
+    font-weight: bold;
+}
+
+.first-container > a {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.first-container  {
+    border-bottom: 1px solid #373867;
+}
+
+.top {
+    width: 100%;
+}
+  
+.bottom {
+    width: 100%;
+}
+  
+.services-container h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+  
+.services-container h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+  
+.hours-movil > h5 {
+    border-bottom: 1px solid #373867;
+}
+
+.hours {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.reports-movil > h5 {
+    border-bottom: 1px solid #373867;
+}
+
+.reports {
+    display: flex;
+    flex-direction: row;
+}
+
+.resources-movil > h5 {
+    border-bottom: 1px solid #373867;
+ }
+
+.resources {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.multiRoles-movil > h5 {
+    border-bottom: 1px solid #373867;
+}
+
+.multiples-roles {
+    display: flex;
+    flex-direction: row;
+}
+
+.services-container {
+    border-bottom: 1px solid #373867;
+    padding: 15px;
+}
+
+.hours-movil-img{
+    position: relative; 
+    left: 0; 
+    top: 0;
+}
+
+.logo{
+    position:absolute;
+    height:100px;
+    width:100px;
+    top: 0px;
+    left : 0px;
+    z-index: 1;
+    opacity: 1;
+    padding: 5px;
+}
+
+.logo-fondo{
+    height:100px;
+    width:100px;
+    z-index: -1;
+    left: 0px;
+    padding: 5px;
+} 
+
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #373867;
+    padding: 15px;
+}
+
+.scroll-container img {
+    display: none;
+}
+
+.scroll-container div {
+    border-bottom: 1px solid #373867;
+}
+
+.scroll-container h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.scroll-container h5 {
+    font-weight: bold;
+}
+
+.scrollmenu-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.request-info-container h3 {
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.na-em-con-area {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+}
+
+.message > div > input {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 10%;
+}
+
+.request-info-container {
+    border-bottom: 1px solid #373867;
+    padding: 15px;
+}
+
+.img-story {
+    display: none;
+}
+
+.history-container h3 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.history-container  {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #373867;
+    padding: 15px;
+}
+
+.our-story-one {
+    order: 0;
+}
+
+.our-story-two {
+    order: 2;
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 3px solid #373867;
+    padding: 15px;
+}
+
+.list-container > div > h5 {
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.list-one, .list-two, .list-three {
+    margin-left: 30px;
+} 
+
+.list-container > div > ul {
+    margin-left: 15px;
+}
+
+@media screen and (min-width: 480px) {
+    .first-container div {
+        display: flex;
+        flex-direction: row;      
+    }
+
+    .first-container > div > section {
+        display: flex;
+        flex-direction: column;      
+    }
+
+    .first-container > div > img {
+        width: 40%;
+        object-fit: cover;
+    }
+
+    .first-container > a {
+        display: flex;
+        flex-direction: wrap;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        background-color: white;
+        color: #373867;
+        border: 1px solid #373867;
+        width: 105px;
+        padding: 8px 10px;
+    } 
+
+    .top {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .reports {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .multiples-roles {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .scroll-container img {
+        display: block;
+        height: 150px;
+        width: 350px;
+        order: 1;
+    }
+
+    .scroll-container h3 {
+        border-bottom: 1px solid #373867;
+    }
+
+    .buttom {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+        background-color: white;
+        color: #373867;
+        border: 1px solid #373867;
+        width: 105px;
+        padding: 8px 10px;
+    }
+
+    form {
+        margin: 40px;
+    }
+
+    .imgStory {
+        display: block;
+    }
+
+    .history-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .our-story-one {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .our-story-two {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .list-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .first-container {
+        width: 100%;
+        height: 450px;
+    }
+
+    .first-container > div > section {
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .hours {
+        display: flex;
+        width: 45%;
+        padding: 25px;
+    }
+    
+    .resources {
+        display: flex;
+        width: 45%;
+        padding: 25px;
+    }
+    
+    .reports {
+        display: flex;
+        width: 45%;
+        padding: 25px;
+    }
+    
+    .multiples-roles {
+        display: flex;
+        width: 45%;
+        padding: 25px;
+    }
+
+    .hours-movil {
+        padding: 5px;
+    }
+
+    .reports-movil {
+        padding: 5px;
+    }
+
+    .resources-movil {
+        padding: 5px;
+    }
+
+    .multiRoles-movil {
+        padding: 5px;
+    }
+
+    .scrollmenu_section {
+        display: inline-block;
+    }
+
+    .scroll-container h3 {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .scroll-container h5 {
+        font-weight: bold;
+    }
+
+    .scrollmenu {
+        display: inline-block;
+        overflow: auto;
+        white-space: nowrap;
+    }
+    
+    .scrollmenu div {
+        display: inline-block;
+        padding: 14px;
+        text-decoration: none;
+        white-space: initial;
+        width: 400px;
+    }
+    
+    .scrollmenu div:hover {
+        background-color: #777;
+    }
+
+    .scroll-container  {
+        padding: 25px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #373867;
+    } 
+
+    .na-em-con-area {
+        width: 50%;
+    }
+
+    .message {
+        width: 50%;
+    }
+
+    .label-datos {
+        display: block; 
+    }
+
+    input {
+        width: 45%;
+    }
+
+    .contact input{
+        display: inline;
+        width: 5%;
+    }
+
+    .request-info-container form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .request-info-container  {
+        border-bottom: 1px solid #373867;
+    }
+
+    .message > div > input {
+        display: inline-block;
+        width: 12%;
+    }
+
+    .list-one {
+        display: inline-block;
+        width: 34%;
+        padding: 5px;
+    }
+    
+    .list-two {
+        display: inline-block;
+        width: 34%;
+        padding: 5px;
+    }
+    
+    .list-three {
+        display: inline-block;
+        width: 30%;
+        padding: 5px;
+    }
+
+    .history-container {
+        width: 100%;
+    }
+    
+    .img-story {
+        display: none;
+    }
+    
+    .history-container h3 {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    
+    .history-container > div > img {
+        float: right;
+        width: 40%;
+        height: 100%;
+        margin-right: -330px;
+    }
+    
+    .our-story-one {
+        display: block;
+        width: 50%;
+    }
+    
+    .our-story-two {
+        display: inline-block;
+        margin-top: 20px;
+        width: 50%;
+    }
+    
+    .our-story-img {
+        display: inline-block;
+        width: 95%;
+        margin-top: -70px;
+        margin-bottom: -70px;
+    }
+}
+
+
+
+

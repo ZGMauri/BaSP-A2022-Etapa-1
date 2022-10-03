@@ -16,20 +16,20 @@ window.onload = function (){
     var arrayChar = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','u','v','w','x','y','z'];
     var haveLetters = false;
     var haveNumbers = false;
-    var pError1 = document.getElementById('errorMsgName');
-    var pError2 = document.getElementById('errorMsgCity');
-    var pError3 = document.getElementById('errorMsgDni');
+    var pError1 = document.getElementById('error-msg-name');
+    var pError2 = document.getElementById('error-msg-city');
+    var pError3 = document.getElementById('error-msg-dni');
     //var pError4 = document.getElementById('errorMsgDate');
-    var pError5 = document.getElementById('errorMsgMail');
-    var pError6 = document.getElementById('errorMsgRPass');
-    var pError7 = document.getElementById('errorMsgLName');
-    var pError8 = document.getElementById('errorMsgPostal');
-    var pError9 = document.getElementById('errorMsgPhone');
-    var pError10 = document.getElementById('errorMsgAdress');
-    var pError11 = document.getElementById('errorMsgPass');
+    var pError5 = document.getElementById('error-msg-mail');
+    var pError6 = document.getElementById('error-msg-rpass');
+    var pError7 = document.getElementById('error-msg-lname');
+    var pError8 = document.getElementById('error-msg-postal');
+    var pError9 = document.getElementById('error-msg-phone');
+    var pError10 = document.getElementById('error-msg-adress');
+    var pError11 = document.getElementById('error-msg-pass');
     var p = document.createElement("p");
     var pText = document.createTextNode('');
-    var arry = [];
+    var errorsArray = [];
     var haveErrors = false;
  
     function findLetters (x){
@@ -390,53 +390,48 @@ window.onload = function (){
 
     function confirm (e){
         e.preventDefault()
+        errorsArray = []
+        haveErrors = false;
         if (name.classList.contains('error')){
-            arry.push('nombre');
+            errorsArray.push (' Field name have errors ');
             haveErrors = true;
-        }else if (lastName.classList.contains('error')){
-            arry.push('apellid');
+        }if (lastName.classList.contains('error')){
+            errorsArray.push (' Field last name have errors ');
             haveErrors = true;
-        }else if (city.classList.contains('error')){
-            arry.push('cuty');
+        }if (city.classList.contains('error')){
+            errorsArray.push (' Field city have errors ');
             haveErrors = true;
-        }else if (postalCode.classList.contains('error')){
-            arry.push('postal');
+        }if (postalCode.classList.contains('error')){
+            errorsArray.push (' Field postal code have errors ');
             haveErrors = true;
-        }else if (dni.classList.contains('error')){
-            arry.push('dni');
+        }if (dni.classList.contains('error')){
+            errorsArray.push (' Field DNI have errors ');
             haveErrors = true;
-        }else if (phone.classList.contains('error')){
-            arry.push('phone');
+        }if (phone.classList.contains('error')){
+            errorsArray.push (' Field phone have errors ');
             haveErrors = true;
-        }else if (date.classList.contains('error')){
-            arry.push('date');
+        }if (date.classList.contains('error')){
+            errorsArray.push (' Invalid date format ');
             haveErrors = true;
-        }else if (adress.classList.contains('error')){
-            arry.push('adres');
+        }if (adress.classList.contains('error')){
+            errorsArray.push (' Field adress have errors ');
             haveErrors = true;
-        }else if (mail.classList.contains('error')){
-            arry.push('mail');
+        }if (mail.classList.contains('error')){
+            errorsArray.push (' Invalid mail format ');
             haveErrors = true;
-        }else if (password.classList.contains('error')){
-            arry.push('pass');
+        }if (password.classList.contains('error')){
+            errorsArray.push (' Field password have errors ');
             haveErrors = true;
-        }else if (repeatPassword.classList.contains('error')){
-            arry.push('passre');
+        }if (repeatPassword.classList.contains('error')){
+            errorsArray.push (' Passwords dont match ');
             haveErrors = true;
         }else {
-            haveErrors = false;
-        }
-
-        errors (haveErrors)
-    }
-
-    function errors (x){
-        if (x){
-            alert(arry)
-        }else{
             alert(name.value + '\n' + lastName.value + '\n' + city.value + '\n' + postalCode.value + '\n' + dni.value + '\n' + phone.value 
             + '\n' + convertDateFormat(date.value) + '\n' + adress.value + '\n' + mail.value + '\n' + password.value + '\n' + repeatPassword.value);
         }
+        if (haveErrors){
+            alert(errorsArray); 
+         }
     }
-    
+
 }
