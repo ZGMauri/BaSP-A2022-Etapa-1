@@ -75,10 +75,12 @@ window.onload = function (){
         if (password.classList.contains('error')){
             errorsArray.push (' Wrong username/password combination ');
             haveErrors = true;
-        }if (mail.classList.contains('error')){
+        }
+        if (mail.classList.contains('error')){
             errorsArray.push (' Invalid email format ');
             haveErrors = true;
-        }else {
+        }
+        if (!haveErrors) {
             alert(mail.value + '\n' + password.value);
             var url = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${mail.value}&password=${password.value}`;
             fetch(url)
@@ -106,7 +108,7 @@ window.onload = function (){
                 })
         }
         if (haveErrors){
-           alert(errorsArray); 
+           alert(errorsArray.join('\n')); 
         }
     }
 }

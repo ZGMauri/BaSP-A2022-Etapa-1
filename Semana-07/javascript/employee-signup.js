@@ -19,7 +19,6 @@ window.onload = function (){
     var pError1 = document.getElementById('error-msg-name');
     var pError2 = document.getElementById('error-msg-city');
     var pError3 = document.getElementById('error-msg-dni');
-    //var pError4 = document.getElementById('errorMsgDate');
     var pError5 = document.getElementById('error-msg-mail');
     var pError6 = document.getElementById('error-msg-rpass');
     var pError7 = document.getElementById('error-msg-lname');
@@ -65,7 +64,7 @@ window.onload = function (){
     name.addEventListener ('blur', aproveName);
     name.addEventListener ('focus', errorName);
 
-    function errorName (e){
+    function errorName (){
         name.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -75,18 +74,18 @@ window.onload = function (){
         }
     }
 
-    function aproveName (e){
+    function aproveName (){
         name.onblur = function (){
             var y = name.value;
             if (name.value.length <= 3){
                 name.classList.add('error');
-                pText.textContent = 'Tiene que tener mas de 3 caracteres';
+                pText.textContent = 'Name must have more than 3 letters';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError1.appendChild(p);
             }else if (findNumbers(y)){
                 name.classList.add('error');
-                pText.textContent= 'No puede tener numeros';
+                pText.textContent= 'Name must have only letters';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError1.appendChild(p);
@@ -99,7 +98,7 @@ window.onload = function (){
     lastName.addEventListener ('blur', aproveLastName);
     lastName.addEventListener ('focus', errorLastName);
 
-    function errorLastName (e){
+    function errorLastName (){
         lastName.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -109,18 +108,18 @@ window.onload = function (){
         }
     }
 
-    function aproveLastName (e){
+    function aproveLastName (){
         lastName.onblur = function (){
             var y = lastName.value;
             if (lastName.value.length <= 3){
                 lastName.classList.add('error');
-                pText.textContent = 'Tiene que tener mas de 3 caracteres';
+                pText.textContent = 'LastName must have more than 3 letters';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError7.appendChild(p);
             }else if (findNumbers(y)){
                 lastName.classList.add('error');
-                pText.textContent= 'No puede tener numeros';
+                pText.textContent= 'LastName must have only letters';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError7.appendChild(p);
@@ -133,7 +132,7 @@ window.onload = function (){
     adress.addEventListener ('blur', aproveAdress);
     adress.addEventListener ('focus', errorAdress);
 
-    function errorAdress (e){
+    function errorAdress (){
         adress.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -143,18 +142,18 @@ window.onload = function (){
         }
     }
 
-    function aproveAdress (e){
+    function aproveAdress (){
         adress.onblur = function (){
             
             if (adress.value.length < 5){
                 adress.classList.add('error');
-                pText.textContent = 'Debe tener al menos 5 caracteres';
+                pText.textContent = 'Address must have at least 5 characters';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError10.appendChild(p);
             }else if (adress.value.indexOf(' ') == -1 || adress.value.indexOf(' ') == 0 || adress.value.indexOf(' ') == (adress.value.length) -1 ){
                 adress.classList.add('error');
-                pText.textContent = 'Debe contener letras, numeros y un espacio en el medio';
+                pText.textContent = 'Address must have only numbers, letters and a space in the middle';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError10.appendChild(p);
@@ -167,7 +166,7 @@ window.onload = function (){
     city.addEventListener ('blur', aproveCity);
     city.addEventListener ('focus', errorCity);
 
-    function errorCity (e){
+    function errorCity (){
         city.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -177,18 +176,18 @@ window.onload = function (){
         }
     }
 
-    function aproveCity (e){
+    function aproveCity (){
         city.onblur = function (){ 
             var y = city.value;          
             if (city.value.length <= 3){
                 city.classList.add('error');
-                pText.textContent = 'Tiene que tener mas de 3 caracteres';
+                pText.textContent = 'City must have more than 3 letters';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError2.appendChild(p);
             }else if(!findNumbers(y) || !findLetters(y)){
                 city.classList.add('error');
-                pText.textContent = 'Debe contener texto alfanumerico';
+                pText.textContent = 'City must have alphanumeric text';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError2.appendChild(p);
@@ -206,7 +205,7 @@ window.onload = function (){
         return emailExpression.test(mail);
     }
     
-    function error (e){
+    function error (){
         mail.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -216,11 +215,11 @@ window.onload = function (){
         }
     }
 
-    function aprove (e){
+    function aprove (){
         mail.onblur = function (){
             if (!parametro(mail.value)){
                 mail.classList.add('error')
-                pText.textContent = 'Formato de mail invalido';
+                pText.textContent = 'Invalid email format';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError5.appendChild(p);
@@ -231,7 +230,7 @@ window.onload = function (){
     dni.addEventListener ('blur', aproveDni);
     dni.addEventListener ('focus', errorDni);
 
-    function errorDni (e){
+    function errorDni (){
         dni.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -241,17 +240,17 @@ window.onload = function (){
         }
     }
 
-    function aproveDni (e){
+    function aproveDni (){
         dni.onblur = function (){
             if(isNaN(dni.value)){
                 dni.classList.add('error')
-                pText.textContent = 'El DNI debe contener solo numeros';
+                pText.textContent = 'DNI must have only numbers';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError3.appendChild(p);
             }else if (dni.value.length < 7){
                 dni.classList.add('error')
-                pText.textContent = 'El DNI debe contener mas de 7 caracteres';
+                pText.textContent = 'DNI must have more than 7 numbers';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError3.appendChild(p);
@@ -264,7 +263,7 @@ window.onload = function (){
     phone.addEventListener ('blur', aprovePhone);
     phone.addEventListener ('focus', errorPhone);
 
-    function errorPhone (e){
+    function errorPhone (){
         phone.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -274,17 +273,17 @@ window.onload = function (){
         }
     }
 
-    function aprovePhone (e){
+    function aprovePhone (){
         phone.onblur = function (){
             if(isNaN(phone.value)){
                 phone.classList.add('error')
-                pText.textContent = 'El telefono debe contener solo numeros';
+                pText.textContent = 'Phone must have only numbers';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError9.appendChild(p);
             }else if (phone.value.length != 10){
                 phone.classList.add('error')
-                pText.textContent = 'Debe contener al menos 10 caracteres';
+                pText.textContent = 'Phone must have 10 numbers';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError9.appendChild(p);
@@ -297,7 +296,7 @@ window.onload = function (){
     postalCode.addEventListener ('blur', aprovePostalCode);
     postalCode.addEventListener ('focus', errorPostalCode);
 
-    function errorPostalCode (e){
+    function errorPostalCode (){
         postalCode.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -307,17 +306,17 @@ window.onload = function (){
         }
     }
 
-    function aprovePostalCode (e){
+    function aprovePostalCode (){
         postalCode.onblur = function (){
             if(isNaN(postalCode.value)){
                 postalCode.classList.add('error')
-                pText.textContent = 'El codigo postal debe contener solo numeros';
+                pText.textContent = 'Zip must have only numbers';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError8.appendChild(p);
             }else if ((postalCode.value.length < 4) || (postalCode.value.length > 5)){
                 postalCode.classList.add('error')
-                pText.textContent = 'El codigo postal debe contener entre 4 y 5 caracteres';
+                pText.textContent = 'Zip must have between 4 and 5 numbers';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError8.appendChild(p);
@@ -330,7 +329,7 @@ window.onload = function (){
     password.addEventListener ('blur', aprovePass);
     password.addEventListener ('focus', errorPass);
 
-    function errorPass (e){
+    function errorPass (){
         password.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -340,11 +339,11 @@ window.onload = function (){
         }
     }
 
-    function aprovePass (e){
+    function aprovePass (){
         password.onblur = function (){
             if(password.value.length < 8){
                 password.classList.add('error');
-                pText.textContent = 'Tiene que tener al menos 8 caracteres';
+                pText.textContent = 'Password must have more than 7 letters';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError11.appendChild(p);
@@ -357,7 +356,7 @@ window.onload = function (){
     repeatPassword.addEventListener ('blur', aproveRPass);
     repeatPassword.addEventListener ('focus', errorRPass);
 
-    function errorRPass (e){
+    function errorRPass (){
         repeatPassword.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -367,11 +366,11 @@ window.onload = function (){
         }
     }
 
-    function aproveRPass (e){
+    function aproveRPass (){
         repeatPassword.onblur = function (){
             if(repeatPassword.value != password.value){
-                password.classList.add('error');
-                pText.textContent = 'Las contraseñas no coinciden';
+                repeatPassword.classList.add('error');
+                pText.textContent = 'Passwords dont match';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError6.appendChild(p);
@@ -411,41 +410,51 @@ window.onload = function (){
         if (name.classList.contains('error')){
             errorsArray.push (' Field name have errors ');
             haveErrors = true;
-        }if (lastName.classList.contains('error')){
+        }
+        if (lastName.classList.contains('error')){
             errorsArray.push (' Field last name have errors ');
             haveErrors = true;
-        }if (city.classList.contains('error')){
+        }
+        if (city.classList.contains('error')){
             errorsArray.push (' Field city have errors ');
             haveErrors = true;
-        }if (postalCode.classList.contains('error')){
+        }
+        if (postalCode.classList.contains('error')){
             errorsArray.push (' Field postal code have errors ');
             haveErrors = true;
-        }if (dni.classList.contains('error')){
+        }
+        if (dni.classList.contains('error')){
             errorsArray.push (' Field DNI have errors ');
             haveErrors = true;
-        }if (phone.classList.contains('error')){
+        }
+        if (phone.classList.contains('error')){
             errorsArray.push (' Field phone have errors ');
             haveErrors = true;
-        }if (date.classList.contains('error')){
+        }
+        if (date.classList.contains('error')){
             errorsArray.push (' Invalid date format ');
             haveErrors = true;
-        }if (adress.classList.contains('error')){
+        }
+        if (adress.classList.contains('error')){
             errorsArray.push (' Field adress have errors ');
             haveErrors = true;
-        }if (mail.classList.contains('error')){
+        }
+        if (mail.classList.contains('error')){
             errorsArray.push (' Invalid mail format ');
             haveErrors = true;
-        }if (password.classList.contains('error')){
+        }
+        if (password.classList.contains('error')){
             errorsArray.push (' Field password have errors ');
             haveErrors = true;
-        }if (repeatPassword.classList.contains('error')){
+        }
+        if (repeatPassword.classList.contains('error')){
             errorsArray.push (' Passwords dont match ');
             haveErrors = true;
-        }else {
-            alert(name.value + '\n' + lastName.value + '\n' + city.value + '\n' + postalCode.value + '\n' + dni.value + '\n' + phone.value 
-            + '\n' + convertDateFormat(date.value) + '\n' + adress.value + '\n' + mail.value + '\n' + password.value + '\n' + repeatPassword.value);
+        }
+        if (!haveErrors) {
+            alert('Name: ' + name.value + '\n' + 'LastName: ' + lastName.value + '\n' + 'City: ' + city.value + '\n' + 'PostalCode: ' + postalCode.value + '\n' + 'DNI: ' + dni.value + '\n' + 'Phone: ' + phone.value 
+            + '\n' + 'Date: ' + convertDateFormat(date.value) + '\n' + 'Adress: ' + adress.value + '\n' + 'Email: ' + mail.value + '\n' + 'Password: ' + password.value + '\n' + 'ConfirmPassword: ' + repeatPassword.value);
             var url = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${name.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${convertDateFormat(date.value)}&phone=${phone.value}&address=${adress.value}&city=${city.value}&zip=${postalCode.value}&email=${mail.value}&password=${password.value}&repeatPassword=${repeatPassword.value}`;
-
             fetch(url)
                 .then(function (response) {
                     return response.json();
@@ -466,7 +475,7 @@ window.onload = function (){
                         localStorage.setItem('repeatPassword',repeatPassword.value);
 
                         var msgSucess = [
-                            'HTTP request succesfull:',
+                            'Request succesfull:',
                             data.msgSucess
                         ]
                         alert(msgSucess.join('\n'))
@@ -483,8 +492,8 @@ window.onload = function (){
                 })
         }
         if (haveErrors){
-            alert(errorsArray); 
-         }
+            alert(errorsArray.join('\n')); 
+        }
     }
 }
 
