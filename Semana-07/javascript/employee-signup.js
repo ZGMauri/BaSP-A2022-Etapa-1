@@ -382,15 +382,31 @@ window.onload = function (){
     }
 
     function convertDateFormat(date) {
-        var dateReverse = date.split('-').reverse().join('/');
-        return dateReverse;
+        var dateReverse = date.split('-');
+        console.log(dateReverse);
+        return dateReverse[1] + '/' + dateReverse[2] + '/' + dateReverse[0];
    }
+
+    if (localStorage != 0){
+        console.log('entramos al if')
+        name.value = localStorage.getItem('name');
+        lastName.value = localStorage.getItem('lastName');
+        dni.value = localStorage.getItem('dni');
+        date.value = localStorage.getItem('date');
+        phone.value = localStorage.getItem('phoneNumber');
+        adress.value = localStorage.getItem('address');
+        city.value = localStorage.getItem('location');
+        postalCode.value = localStorage.getItem('postalCode');
+        mail.value = localStorage.getItem('email');
+        password.value = localStorage.getItem('password');
+        repeatPassword.value = localStorage.getItem('repeatPassword');
+    }
 
     button.addEventListener('click', confirm);
 
     function confirm (e){
         e.preventDefault()
-        errorsArray = []
+        errorsArray = [];
         haveErrors = false;
         if (name.classList.contains('error')){
             errorsArray.push (' Field name have errors ');
@@ -428,10 +444,47 @@ window.onload = function (){
         }else {
             alert(name.value + '\n' + lastName.value + '\n' + city.value + '\n' + postalCode.value + '\n' + dni.value + '\n' + phone.value 
             + '\n' + convertDateFormat(date.value) + '\n' + adress.value + '\n' + mail.value + '\n' + password.value + '\n' + repeatPassword.value);
+            var url = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${name.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${convertDateFormat(date.value)}&phone=${phone.value}&address=${adress.value}&city=${city.value}&zip=${postalCode.value}&email=${mail.value}&password=${password.value}&repeatPassword=${repeatPassword.value}`;
+
+            fetch(url)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    console.log(data)
+                    if (data.success == true) {
+                        localStorage.setItem('name', name.value);
+                        localStorage.setItem('lastName', lastName.value);
+                        localStorage.setItem('dni', dni.value);
+                        localStorage.setItem('date', date.value);
+                        localStorage.setItem('phoneNumber', phone.value);
+                        localStorage.setItem('address', adress.value);
+                        localStorage.setItem('location', city.value);
+                        localStorage.setItem('postalCode',postalCode.value);
+                        localStorage.setItem('email',mail.value);
+                        localStorage.setItem('password',password.value);
+                        localStorage.setItem('repeatPassword',repeatPassword.value);
+
+                        var msgSucess = [
+                            'HTTP request succesfull:',
+                            data.msgSucess
+                        ]
+                        alert(msgSucess.join('\n'))
+                    } else {
+                        var msgError = [
+                            'An error has occured:',
+                            console.log(data)
+                        ]
+                        alert(msgError.join('\n'));
+                    }
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
         }
         if (haveErrors){
             alert(errorsArray); 
          }
     }
-
 }
+

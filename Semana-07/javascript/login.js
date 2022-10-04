@@ -70,7 +70,7 @@ window.onload = function (){
 
     function confirm (e){
         e.preventDefault()
-        errorsArray = []
+        errorsArray = [];
         haveErrors = false;
         if (password.classList.contains('error')){
             errorsArray.push (' Wrong username/password combination ');
