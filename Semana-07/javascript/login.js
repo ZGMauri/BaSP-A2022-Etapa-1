@@ -12,12 +12,11 @@ window.onload = function (){
 
     mail.addEventListener ('blur', aprove);
     mail.addEventListener ('focus', error);
-
     function parametro (mail) {
         return emailExpression.test(mail);
     }
     
-    function error (e){
+    function error (){
         mail.onfocus = function (){
             if (this.classList.contains('error')){
                 this.classList.remove('error');
@@ -27,7 +26,7 @@ window.onload = function (){
         }
     }
 
-    function aprove (e){
+    function aprove (){
         mail.onblur = function (){
             if (!parametro(mail.value)){
                 mail.classList.add('error')
@@ -41,7 +40,6 @@ window.onload = function (){
 
     password.addEventListener ('blur', aprovePass);
     password.addEventListener ('focus', errorPass);
-
     function errorPass (e){
         password.onfocus = function (){
             if (this.classList.contains('error')){
@@ -52,7 +50,7 @@ window.onload = function (){
         }
     }
 
-    function aprovePass (e){
+    function aprovePass (){
         password.onblur = function (){
             if(password.value.length < 8){
                 password.classList.add('error');
@@ -67,7 +65,6 @@ window.onload = function (){
     }
 
     button.addEventListener('click', confirm);
-
     function confirm (e){
         e.preventDefault()
         errorsArray = [];

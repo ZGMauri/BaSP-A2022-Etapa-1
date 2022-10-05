@@ -63,7 +63,6 @@ window.onload = function (){
 
     name.addEventListener ('blur', aproveName);
     name.addEventListener ('focus', errorName);
-
     function errorName (){
         name.onfocus = function (){
             if (this.classList.contains('error')){
@@ -76,14 +75,14 @@ window.onload = function (){
 
     function aproveName (){
         name.onblur = function (){
-            var y = name.value;
+            var tmp = name.value;
             if (name.value.length <= 3){
                 name.classList.add('error');
                 pText.textContent = 'Name must have more than 3 letters';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError1.appendChild(p);
-            }else if (findNumbers(y)){
+            }else if (findNumbers(tmp)){
                 name.classList.add('error');
                 pText.textContent= 'Name must have only letters';
                 p.appendChild(pText);
@@ -110,14 +109,14 @@ window.onload = function (){
 
     function aproveLastName (){
         lastName.onblur = function (){
-            var y = lastName.value;
+            var tmp = lastName.value;
             if (lastName.value.length <= 3){
                 lastName.classList.add('error');
                 pText.textContent = 'LastName must have more than 3 letters';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError7.appendChild(p);
-            }else if (findNumbers(y)){
+            }else if (findNumbers(tmp)){
                 lastName.classList.add('error');
                 pText.textContent= 'LastName must have only letters';
                 p.appendChild(pText);
@@ -131,7 +130,6 @@ window.onload = function (){
 
     adress.addEventListener ('blur', aproveAdress);
     adress.addEventListener ('focus', errorAdress);
-
     function errorAdress (){
         adress.onfocus = function (){
             if (this.classList.contains('error')){
@@ -144,7 +142,6 @@ window.onload = function (){
 
     function aproveAdress (){
         adress.onblur = function (){
-            
             if (adress.value.length < 5){
                 adress.classList.add('error');
                 pText.textContent = 'Address must have at least 5 characters';
@@ -165,7 +162,6 @@ window.onload = function (){
 
     city.addEventListener ('blur', aproveCity);
     city.addEventListener ('focus', errorCity);
-
     function errorCity (){
         city.onfocus = function (){
             if (this.classList.contains('error')){
@@ -178,14 +174,14 @@ window.onload = function (){
 
     function aproveCity (){
         city.onblur = function (){ 
-            var y = city.value;          
+            var tmp = city.value;          
             if (city.value.length <= 3){
                 city.classList.add('error');
                 pText.textContent = 'City must have more than 3 letters';
                 p.appendChild(pText);
                 p.style.color = '#FF0000';
                 pError2.appendChild(p);
-            }else if(!findNumbers(y) || !findLetters(y)){
+            }else if(!findNumbers(tmp) || !findLetters(tmp)){
                 city.classList.add('error');
                 pText.textContent = 'City must have alphanumeric text';
                 p.appendChild(pText);
@@ -197,10 +193,8 @@ window.onload = function (){
         }
     }
 
-
     mail.addEventListener ('blur', aprove);
     mail.addEventListener ('focus', error);
-
     function parametro (mail) {
         return emailExpression.test(mail);
     }
@@ -229,7 +223,6 @@ window.onload = function (){
 
     dni.addEventListener ('blur', aproveDni);
     dni.addEventListener ('focus', errorDni);
-
     function errorDni (){
         dni.onfocus = function (){
             if (this.classList.contains('error')){
@@ -262,7 +255,6 @@ window.onload = function (){
 
     phone.addEventListener ('blur', aprovePhone);
     phone.addEventListener ('focus', errorPhone);
-
     function errorPhone (){
         phone.onfocus = function (){
             if (this.classList.contains('error')){
@@ -295,7 +287,6 @@ window.onload = function (){
 
     postalCode.addEventListener ('blur', aprovePostalCode);
     postalCode.addEventListener ('focus', errorPostalCode);
-
     function errorPostalCode (){
         postalCode.onfocus = function (){
             if (this.classList.contains('error')){
@@ -328,7 +319,6 @@ window.onload = function (){
     
     password.addEventListener ('blur', aprovePass);
     password.addEventListener ('focus', errorPass);
-
     function errorPass (){
         password.onfocus = function (){
             if (this.classList.contains('error')){
@@ -355,7 +345,6 @@ window.onload = function (){
 
     repeatPassword.addEventListener ('blur', aproveRPass);
     repeatPassword.addEventListener ('focus', errorRPass);
-
     function errorRPass (){
         repeatPassword.onfocus = function (){
             if (this.classList.contains('error')){
@@ -402,7 +391,6 @@ window.onload = function (){
     }
 
     button.addEventListener('click', confirm);
-
     function confirm (e){
         e.preventDefault()
         errorsArray = [];
